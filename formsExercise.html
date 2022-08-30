@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Experience Survery</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Customer Experience Survey</legend>
+            <label for="storeNumber">Store Number</label>
+            <select name="storeNumber" id="storeNumber">
+                <!-- Bonus 1 -->
+                <!-- adding hidden hides the option -->
+                <option value="" disabled selected hidden>Select A Store</option>
+                <option value="3109">3109</option>
+                <option value="2421">2421</option>
+                <option value="5357">5357</option>
+            </select>
+            <fieldset>
+                <legend>When you visited</legend>
+                <div>
+                    <!-- Bonus 2 -->
+                    <label for="visitDate">Date Visited</label>
+                    <input type="date" name="visitDate" id="visitDate" max="2022-12-31" min="2022-01-01">
+                    <!-- min max year-month-day to set limits on dates -->
+                </div>
+            <br>
+                <div>
+                    <label for="timeVisited">Time</label>
+                    <input type="time" name="timeVisited" id="timeVisited">
+                </div>
+            </fieldset>
+                <label for="fullName">Full Name:</label>
+                <input type="text" placeholder="Name" id="fullName" name="fullName">
+            <br>
+                <label for="email">Email:</label>
+                <input type="text" placeholder="Email" id="email" name="email">
+            <fieldset>
+                <legend>How would you rate your level of satisfaction with your visit?</legend>
+                <div>
+                    <input type="radio" name="satisfaction" id="satisfied">
+                    <label for="satisfied">Satisfied</label>
+                </div>
+                <div>
+                    <!-- Bonus 3 -->
+                    <input type="radio" name="satisfaction" id="neither" checked>
+                    <label for="neither">Neither Satisfied nor Dissatistfied</label>
+                </div>
+                <div>
+                    <input type="radio" name="satisfaction" id="dissatisfied">
+                    <label for="dissatisfied">Dissatisfied</label>
+                </div>
+            </fieldset>
+                <label for="experienceTell">Tell us about your experience</label>
+            <br>
+                <textarea name="experienceTell" id="experienceTell" cols="20" rows="2"></textarea>
+            <br>
+                <label for="visitTimes">Times visited in the last month:</label>
+            <br>
+            <!-- Bonus 4 -->
+                <input type="number" id="visitTimes" name="visitTimes" min="0" max="30">
+                <div>
+                    <!-- Bonus 5 -->
+                    <input type="checkbox" name="contact" id="contact" required>
+                    <label for="contact">Please check the box if you would be willing to be contacted about your experience</label>
+                </div>
+                <!-- Bonus 6 -->
+                <label for="pw">Create a Password:</label>
+                <input type="password" name="pw" id="pw" pattern=".{5,10}" title="Password must be between 5-10 characters in length." oninvalid="this.setCustomValidity('Password must be between 5-10 characters in length')">
+            <br>
+            <!-- Bonus 7 -->
+                <input type="reset" value="Reset The Form">
+                <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
